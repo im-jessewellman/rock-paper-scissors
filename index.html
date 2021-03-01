@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function computerPlay() {
+            const random = ["ROCK", "PAPER", "SCISSORS"];
+
+            const randomSelect = random[Math.floor(Math.random() * random.length)];
+
+            return randomSelect;
+
+        };
+
+
+
+
+
+        function playRound(playerSelection, computerSelection) {
+
+            if (computerSelection === playerSelection) {
+                return result = "There was a tie"
+            } else if (computerSelection === "ROCK" && playerSelection === "PAPER") {
+                return "You Win"
+            } else if (computerSelection === "ROCK" && playerSelection === "SCISSORS") {
+                return "You Lost"
+            } else if (computerSelection === "PAPER" && playerSelection === "ROCK") {
+                return "You Lost"
+            } else if (computerSelection === "PAPER" && playerSelection === "SCISSORS") {
+                return "You Win"
+            } else if (computerSelection === "SCISSORS" && playerSelection === "ROCK") {
+                return "You Win"
+            } else if (computerSelection === "SCISSORS" && playerSelection === "PAPER") {
+                return "You Lost"
+            }
+
+
+        }
+
+        const player = prompt("Enter Rock, Paper, or Scissors: ");
+        const playerSelection = player.toUpperCase();
+        const computerSelection = computerPlay();
+
+
+
+        console.log(playRound(playerSelection, computerSelection));
+    </script>
+</body>
+
+</html>
